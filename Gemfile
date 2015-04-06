@@ -29,8 +29,9 @@ end
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'pry-byebug'
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
 end
 
 group :production do
