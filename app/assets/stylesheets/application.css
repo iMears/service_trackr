@@ -16,13 +16,44 @@
 
  html, body {
   font-family: 'Oxygen', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
  }
+
+#page-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#page-header {
+
+}
+
+#page-content {
+  padding-bottom: 160px;
+}
+
+#page-footer {
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+}
 
 header {
   margin-top: 50px;
   padding: 100px 0;
   color: white;
   background-color: #037fb2;
+}
+
+footer ul {
+  list-style: none;
+  padding: 110px 0 0;
+  font-size: 12px;
 }
 
 .intro-text h1{

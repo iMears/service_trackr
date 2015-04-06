@@ -7,12 +7,22 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'shared/navigation' %>
-    <%= render 'shared/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="page-wrapper">
+      <div id="page-header">
+        <%= render 'shared/navigation' %>
+        <%= render 'shared/header' %>
+      </div>
 
-    <%= yield %>
+      <div id="page-content">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
 
+      <div id="page-footer">
+        <%= render 'shared/footer' %>
+      </div>
+
+    </div>
   </body>
 </html>
