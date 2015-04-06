@@ -42,3 +42,9 @@ header {
   font-size: 18px;
 }
 
+.textarea-fresh {
+  resize: none;
+  min-height: 300px;
+  font-size: 18px;
+}
+
