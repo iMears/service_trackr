@@ -15,18 +15,22 @@
  */
 
 header {
-  margin-top: 100px;
+  margin-top: 50px;
+  padding: 100px;
+  color: white;
+  background-color: #037fb2;
+}
+
+.intro-text h1{
+  font-size: 48px;
 }
 
 .navbar {
-  /*background-color: black;*/
   opacity: 0.7;
 }
 
-.navbar-brand {
-  color: white; !important
+.form-fresh {
+  min-height: 75px;
+  font-size: 18px;
 }
 
-.nav {
-  color: white;
-}
