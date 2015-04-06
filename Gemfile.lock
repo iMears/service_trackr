@@ -288,6 +288,10 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sweet-alert (0.0.7)
+    sweet-alert-confirm (0.2.0)
+      jquery-rails
+      sweet-alert
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -356,6 +360,8 @@ DEPENDENCIES
   simplecov
   spring
   spring-commands-rspec
+  sweet-alert
+  sweet-alert-confirm
   therubyracer
   turbolinks
   twitter-bootstrap-rails
