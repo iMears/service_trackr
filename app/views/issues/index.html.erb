@@ -2,33 +2,39 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= link_to "+ Create an Issue", new_user_issue_path(current_user), class: "btn btn-lg form-control btn-fresh"  %>
-      <div class="btn btn-lg form-control btn-fresh">&gt; View All Issues</div>
+      <div class="btn btn-lg form-control btn-fresh">
+        &gt; View All Issues
+      </div>
     </div>
   </div>
-  <br><br> <!-- take these out!!! -->
+  <br><br> <!-- take line breaks out!!! -->
   <div class="row">
     <div class="col-lg-10 col-lg-offset-1">
-      <% @issues.each do |issue| %>
-        <div class="issue-id">
-          <%= issue.id %>
-        </div>
-        <div class="issue-date">
-          <%= issue.created_at.to_s(:short) %>
-        </div>
-        <div class="issue-subject">
-          <%= issue.subject %>
-        </div>
-        <div class="issue-description">
-          <%= issue.description %>
-        </div>
-        <div class="issue-status">
-          <%= issue.status %>
-        </div>
-        <div class="issue-priority">
-          <%= issue.priority %>
-        </div>
-        <br><br> <!-- take these out!!! -->
-      <% end %>
-    </div>
-  </div>
-</div>
+      <div class="all-issues-container">
+        <% @issues.each do |issue| %>
+          <div class="single-issue-container">
+            <div class="issue-id">
+              <%= issue.id %>
+            </div>
+            <div class="issue-date">
+              <%= issue.created_at.to_s(:long) %>
+            </div>
+            <div class="issue-subject">
+              <%= issue.subject %>
+            </div>
+            <div class="issue-description">
+              <%= issue.description %>
+            </div>
+            <div class="issue-status">
+              <%= issue.status %>
+            </div>
+            <div class="issue-priority">
+              <%= issue.priority %>
+            </div>
+            <br><br> <!-- take line breaks out!!! -->
+          </div>
+        <% end %>
+      </div> <!-- end all-issues-container -->
+    </div> <!-- end column -->
+  </div> <!-- end row -->
+</div> <!-- end container -->
