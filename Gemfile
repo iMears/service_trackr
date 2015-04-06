@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 gem 'active_model_serializers'
 gem 'aws-sdk-core', '~> 2.0'
 gem 'bcrypt'
