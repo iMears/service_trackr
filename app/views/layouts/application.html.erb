@@ -14,8 +14,10 @@
       </div>
 
       <div id="page-content">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <% if notice %>
+          <div class="notice alert alert-info text-center"><%= notice %></div>
+          <div class="alert alert-succes text-center"><%= alert %></div>
+        <% end %>
         <%= yield %>
       </div>
 

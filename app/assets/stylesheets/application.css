@@ -31,7 +31,7 @@
 }
 
 #page-content {
-  padding-bottom: 160px;
+  padding-bottom: 360px;
 }
 
 #page-footer {
@@ -45,6 +45,7 @@
 
 header {
   margin-top: 50px;
+  margin-bottom: 150px;
   padding: 100px 0;
   color: white;
   background-color: #037fb2;
@@ -58,10 +59,6 @@ footer ul {
 
 .intro-text h1{
   font-size: 48px;
-}
-
-.navbar {
-  opacity: 0.7;
 }
 
 .login-form {
