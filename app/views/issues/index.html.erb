@@ -5,6 +5,7 @@
       <div class="btn btn-lg form-control btn-fresh">&gt; View All Issues</div>
     </div>
   </div>
+  <br><br> <!-- take these out!!! -->
   <div class="row">
     <div class="col-lg-10 col-lg-offset-1">
       <% @issues.each do |issue| %>
@@ -17,12 +18,16 @@
         <div class="issue-subject">
           <%= issue.subject %>
         </div>
+        <div class="issue-description">
+          <%= issue.description %>
+        </div>
         <div class="issue-status">
           <%= issue.status %>
         </div>
         <div class="issue-priority">
           <%= issue.priority %>
         </div>
+        <br><br> <!-- take these out!!! -->
       <% end %>
     </div>
   </div>
