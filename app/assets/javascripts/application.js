@@ -24,6 +24,9 @@ $(document).ready(function() {
 
   $(document).on('click', '#view-issues-btn', function() {
     $('#issues-table').toggle("slow");
+    $(this).children('p').text(function(i, t) {
+      return t == 'Show All Issues' ? 'Hide All Issues' : 'Show All Issues';
+    });
   });
 
 });

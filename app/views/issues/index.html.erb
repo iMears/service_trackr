@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
+      <div class="btn btn-lg form-control btn-fresh">
+        <p>My Profile</p>
+      </div>
       <%= link_to "+ Create an Issue", new_user_issue_path(current_user), class: "btn btn-lg form-control btn-fresh"  %>
       <div class="btn btn-lg form-control btn-fresh" id="view-issues-btn">
-        &gt; View All Issues
+        <p>Show All Issues</p>
       </div>
     </div>
   </div>
