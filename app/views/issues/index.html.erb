@@ -15,46 +15,34 @@
         <table class="table">
           <thead>
             <tr>
-              <th>ID:</th>
-              <th>Date:</th>
-              <th>Priority:</th>
-              <th>Subject:</th>
-              <th>Description:</th>
-              <th>Status:</th>
+              <th>ID</th>
+              <th>DATE</th>
+              <th>PRIORITY</th>
+              <th>SUBJECT</th>
+              <th>DESCRIPTION</th>
+              <th>STATUS</th>
             </tr>
           </thead>
           <tbody>
             <% @issues.each do |issue| %>
               <tr data-link="<%= edit_user_issue_path(current_user, issue)%>">
-                <td>
-                  <div class="issue">
-                    <%= issue.id %>
-                  </div>
+                <td data-label="ID">
+                  <%= issue.id %>
                 </td>
-                <td>
-                  <div class="issue">
-                    <%= issue.created_at.to_s(:long) %>
-                  </div>
+                <td data-label="DATE">
+                  <%= issue.created_at.to_s(:long) %>
                 </td>
-                <td>
-                  <div class="issue">
-                    <%= issue.priority %>
-                  </div>
+                <td data-label="PRIORITY">
+                  <%= issue.priority %>
                 </td>
-                <td>
-                  <div class="issue">
-                    <%= issue.subject %>
-                  </div>
+                <td data-label="SUBJECT">
+                  <%= issue.subject %>
                 </td>
-                <td>
-                  <div class="issue">
-                    <%= issue.description %>
-                  </div>
+                <td data-label="DESCRIPTION">
+                  <%= issue.description %>
                 </td>
-                <td>
-                  <div class="issue">
-                    <%= issue.status %>
-                  </div>
+                <td data-label="STATUS">
+                  <%= issue.status %>
                 </td>
               </tr>
             <% end %>
