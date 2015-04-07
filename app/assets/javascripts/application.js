@@ -15,3 +15,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $(document).on('click', "tr[data-link]", function() {
+    window.location = $(this).data('link')
+  });
+});

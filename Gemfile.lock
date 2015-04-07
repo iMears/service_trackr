@@ -149,8 +149,6 @@ GEM
     less-rails (2.6.0)
       actionpack (>= 3.1)
       less (~> 2.6.0)
-    libnotify (0.9.1)
-      ffi (>= 1.0.11)
     libv8 (3.16.14.7)
     listen (2.10.0)
       celluloid (~> 0.16.0)
@@ -347,7 +345,6 @@ DEPENDENCIES
   jquery-rails
   launchy
   less-rails
-  libnotify
   pg
   poltergeist
   pry-byebug

@@ -17,6 +17,21 @@ class IssuesController < ApplicationController
     end
   end
 
+  def edit
+    @issue = Issue.find(params[:id])
+    # binding.pry
+  end
+
+  def update
+    @issue.update(issue_params)
+    if @issue.valid?
+      flash[:success] = "Successfully updated issue!"
+      redirect_to user_issues
+    else
+      flash[:error] = "Error, could not update!"
+    end
+  end
+
   private
 
     def issue_params

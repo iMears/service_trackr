@@ -23,7 +23,6 @@ gem 'sweet-alert-confirm'
 
 group :development do
   gem 'guard-rspec'
-  gem 'libnotify'
   gem 'spring'
   gem 'spring-commands-rspec'
 end

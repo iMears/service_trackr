@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-offset-3">
+      <%= form_for [current_user, @issue], url: {action: "update"}, html: {method: "patch"} do |f| %>
+        <%= f.text_field :subject, placeholder: "Subject", class: "form-control form-fresh" %>
+        <%= f.text_field :priority, placeholder: "Priority", class: "form-control form-fresh" %>
+        <%= f.text_area :description, placeholder: "Description", class: "form-control textarea-fresh" %>
+        <%= f.submit "Update Issue", class: "btn-fresh form-control" %>
+      <% end %>
+    </div>
+  </div>
+</div>
