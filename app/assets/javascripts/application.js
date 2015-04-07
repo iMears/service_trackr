@@ -17,7 +17,13 @@
 //= require_tree .
 
 $(document).ready(function() {
+
   $(document).on('click', "tr[data-link]", function() {
     window.location = $(this).data('link')
   });
+
+  $(document).on('click', '#view-issues-btn', function() {
+    $('#issues-table').toggle("slow");
+  });
+
 });

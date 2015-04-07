@@ -83,7 +83,7 @@ tbody {
   min-height: 75px;
   font-size: 18px;
   p {
-    padding: 12px;
+    padding: 12px 0;
   }
 }
 
@@ -91,6 +91,10 @@ tbody {
   resize: none;
   min-height: 300px;
   font-size: 18px;
+}
+
+#issues-table {
+  display: none;
 }
 
 

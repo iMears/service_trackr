@@ -17,6 +17,10 @@ class IssuesController < ApplicationController
     end
   end
 
+  def show
+    @issue = Issue.find(params[:id])
+  end
+
   def edit
     @issue = Issue.find(params[:id])
   end

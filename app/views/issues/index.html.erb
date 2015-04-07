@@ -2,53 +2,13 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= link_to "+ Create an Issue", new_user_issue_path(current_user), class: "btn btn-lg form-control btn-fresh"  %>
-      <!-- <div class="btn btn-lg form-control btn-fresh">
+      <div class="btn btn-lg form-control btn-fresh" id="view-issues-btn">
         &gt; View All Issues
-      </div> -->
+      </div>
     </div>
   </div>
   <br><br> <!-- take line breaks out!!! -->
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="all-issues-container">
-      <br><br><br><br> <!-- take line breaks out!!! -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>DATE</th>
-              <th>PRIORITY</th>
-              <th>SUBJECT</th>
-              <th>DESCRIPTION</th>
-              <th>STATUS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @issues.each do |issue| %>
-              <tr data-link="<%= edit_user_issue_path(current_user, issue)%>">
-                <td data-label="ID">
-                  <%= issue.id %>
-                </td>
-                <td data-label="DATE">
-                  <%= issue.created_at.to_s(:long) %>
-                </td>
-                <td data-label="PRIORITY">
-                  <%= issue.priority %>
-                </td>
-                <td data-label="SUBJECT">
-                  <%= issue.subject %>
-                </td>
-                <td data-label="DESCRIPTION">
-                  <%= issue.description %>
-                </td>
-                <td data-label="STATUS">
-                  <%= issue.status %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div> <!-- end all-issues-container -->
-    </div> <!-- end column -->
-  </div> <!-- end row -->
+  <div id="issues-table">
+    <%= render 'table', issues: @issues %>
+  </div>
 </div> <!-- end container -->
