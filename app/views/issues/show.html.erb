@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-lg-10 col-lg-offset-1">
       <% case @issue.status.downcase %>
       <% when "active" %>
         <div class="alert alert-success form-control form-fresh text-center">
@@ -11,8 +11,24 @@
           <p>Closed</p>
         </div>
       <% end %>
-      <div class="form-control form-fresh">
-        <p><%= @issue.subject %></p>
+    </div>
+  </div>
+  <div class="row issue-info">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h4><strong>SUBJECT:</strong> <%= @issue.subject %></h4>
+      <h4><strong>DATE:</strong> <%= @issue.created_at.to_s(:long) %></h4>
+      <h4><strong>ISSUE ID:</strong> <%= @issue.id %></h4>
+      <h4><strong>PRIORITY:</strong> <%= @issue.priority %></h4>
+      <h4><strong>DESCRIPTION:</strong> <%= @issue.description %></h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="btn btn-lg form-control btn-fresh">
+        <p>Show Issue Log</p>
+      </div>
+      <div class="btn btn-lg form-control btn-fresh">
+        <p>Update Issue</p>
       </div>
     </div>
   </div>
