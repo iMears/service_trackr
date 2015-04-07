@@ -45,24 +45,34 @@
 
 header {
   margin-top: 50px;
-  margin-bottom: 150px;
+  // margin-bottom: 150px;
   padding: 100px 0;
   color: white;
   background-color: #037fb2;
 }
 
-footer ul {
-  list-style: none;
-  padding: 110px 0 0;
-  font-size: 12px;
+footer {
+  ul {
+    list-style: none;
+    padding: 110px 0 0;
+    font-size: 12px;
+  }
 }
 
 td {
   cursor: pointer;
 }
 
-.intro-text h1{
-  font-size: 48px;
+tbody {
+  tr:hover {
+    background-color: #D9EDF7;
+  }
+}
+
+.intro-text {
+  h1{
+    font-size: 48px;
+  }
 }
 
 .login-form {
@@ -72,6 +82,9 @@ td {
 .form-fresh {
   min-height: 75px;
   font-size: 18px;
+  p {
+    padding: 12px;
+  }
 }
 
 .textarea-fresh {

@@ -19,14 +19,14 @@ class IssuesController < ApplicationController
 
   def edit
     @issue = Issue.find(params[:id])
-    # binding.pry
   end
 
   def update
+    @issue = Issue.find(params[:id])
     @issue.update(issue_params)
     if @issue.valid?
       flash[:success] = "Successfully updated issue!"
-      redirect_to user_issues
+      redirect_to user_issues_path
     else
       flash[:error] = "Error, could not update!"
     end
