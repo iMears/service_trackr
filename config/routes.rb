@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [] do
-    resources :issues
+    resources :issues do
+      resources :entries
+    end
   end
 
   root "welcome#index"
