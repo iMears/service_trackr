@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   def index
-    @issues = Issue.where(user_id: current_user)
+    @issues = Issue.where(user_id: current_user).order('created_at desc')
   end
 
   def new
