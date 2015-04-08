@@ -5,11 +5,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-10 col-md-offset-2">
-      <%= @entries.each do |entry| %>
-        <div class="well">
-          <h4>Posted by: <%= entry.posted_by %></h4>
-          <h3 class="text-center"><%= entry.body %></h3>
+    <div class="col-md-10 col-md-offset-1">
+      <% @entries.each do |entry| %>
+        <div class="well entry">
+          Posted by: <%= entry.posted_by %>
+          <div class="pull-right">
+            <%= entry.created_at.to_s(:short) %>
+          </div>
+          <h4><%= entry.body %></h4>
         </div>
       <% end %>
     </div>
