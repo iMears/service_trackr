@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
   private
 
     def layout
-      return false if is_a?(Devise::SessionsController) || is_a?(Devise::RegistrationsController)
+      if is_a?(Devise::SessionsController) || is_a?(Devise::RegistrationsController)
+        "splash"
+      else
+        nil
+      end
     end
 
   protected
