@@ -1,10 +1,11 @@
+<%= render 'shared/header', page_title: "New Entry" %>
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for @entry, url: {action: "create"}, html: {class: "form-group"} do |f| %>
         <%= f.text_field :posted_by, placeholder: "*Posted by", class: "form-control form-fresh" %>
         <%= f.text_area :body, placeholder: "*Entry text", class: "form-control textarea-fresh" %>
-        <%= f.submit "Submit Entry", class: "btn btn-lg btn-fresh form-control" %>
+        <%= f.submit "Submit", class: "btn btn-lg btn-fresh form-control" %>
       <% end %>
     </div>
   </div>
