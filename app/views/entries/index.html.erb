@@ -1,5 +1,6 @@
-<%= render 'shared/header', page_title: "Issue Log" %>
+<%= render 'shared/header', page_title: "Issue ##{@issue.id} History" %>
 <div class="container">
+  <%= link_to "< Back", :back %>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <%= link_to "+ Add Entry", new_user_issue_entry_path(current_user, @issue), class: "btn btn-lg form-control btn-fresh" %>
