@@ -1,3 +1,4 @@
+<%= render 'shared/header', page_title: "My Profile" %>
 <div class="container">
   <%= link_to "< Back", :back %>
   <div class="row">
@@ -14,7 +15,7 @@
 
       <% end %>
 
-      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-lg form-control btn-fresh" %>
+      <%= button_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-lg form-control btn-fresh" %>
     </div>
   </div> <!-- end row -->
 </div> <!-- end container -->
