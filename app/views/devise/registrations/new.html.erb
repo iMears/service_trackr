@@ -1,3 +1,4 @@
+<%= render 'shared/header', page_title: "Welcome, Please Sign Up!" %>
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
@@ -22,7 +23,7 @@
           <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm password", class: "form-control form-fresh" %>
         </div>
         <div class="actions text-center">
-          <%= f.submit "Sign up", class: "btn btn-lg form-control btn-fresh" %>
+          <%= f.submit "Create My Account", class: "btn btn-lg form-control btn-fresh" %>
         </div>
       <% end %>
       <%= render "devise/shared/links" %>

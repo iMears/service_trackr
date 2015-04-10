@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   private
 
     def layout
-      if is_a?(Devise::SessionsController) || is_a?(Devise::RegistrationsController)
+      if is_a?(Devise::SessionsController)
         "splash"
       else
         nil
