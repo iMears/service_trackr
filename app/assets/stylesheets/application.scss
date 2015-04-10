@@ -10,8 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require sweet-alert
+ *= require_tree .
  *= require_self
  */
 
@@ -51,11 +51,18 @@ header {
   color: white;
   background-color: #037fb2;
   h2 {
-    font-size: 21px;
+    font-size: 24px;
+    margin-top: 0;
   }
   #title {
     font-size: 100px;
+    margin: 0
   }
+}
+
+.logo{
+  max-width: 96px;
+  padding-bottom: 20px;
 }
 
 footer {
