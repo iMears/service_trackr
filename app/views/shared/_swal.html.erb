@@ -1,0 +1,7 @@
+<% if flash[:alert] %>
+ <script>
+   swal({title: <%= flash[:alert].to_json.html_safe %>,
+         type: "error"
+   });
+ </script>
+<% end %>
