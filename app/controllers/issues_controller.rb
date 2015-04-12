@@ -10,9 +10,10 @@ class IssuesController < ApplicationController
   def create
     if @issue = Issue.create(issue_params)
       current_user.issues << @issue
+      flash[:success] = "Issue Created!"
       redirect_to user_issue_path(current_user, @issue)
     else
-      flash[:error] = "didnt work!!"
+      flash[:error] = "Error, could not create this issue"
       render 'new'
     end
   end
@@ -29,7 +30,7 @@ class IssuesController < ApplicationController
     @issue = Issue.find(params[:id])
     @issue.update(issue_params)
     if @issue.valid?
-      flash[:success] = "Successfully updated issue!"
+      flash[:success] = "Issue Updated!"
       redirect_to user_issue_path(current_user, @issue)
     else
       flash[:error] = "Error, could not update!"

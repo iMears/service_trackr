@@ -5,4 +5,14 @@
           type: "error"
     });
   </script>
+
+<% elsif flash[:success] %>
+  <script>
+    swal({title: <%= flash[:success].to_json.html_safe %>,
+          allowOutsideClick: true,
+          type: "success"
+    });
+  </script>
 <% end %>
+
+
