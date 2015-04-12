@@ -8,12 +8,14 @@ class IssuesController < ApplicationController
   end
 
   def create
-    if @issue = Issue.create(issue_params)
+    @issue = Issue.create(issue_params)
+    if @issue.valid?
       current_user.issues << @issue
       flash[:success] = "Issue Created!"
       redirect_to user_issue_path(current_user, @issue)
     else
-      flash[:error] = "Error, could not create this issue"
+      #TODO display full messages to user
+      flash[:alert] = "Error: Could not create this issue!"
       render 'new'
     end
   end
