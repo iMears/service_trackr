@@ -30,7 +30,7 @@ class IssuesController < ApplicationController
     @issue.update(issue_params)
     if @issue.valid?
       flash[:success] = "Successfully updated issue!"
-      redirect_to user_issues_path
+      redirect_to user_issue_path(current_user, @issue)
     else
       flash[:error] = "Error, could not update!"
     end
