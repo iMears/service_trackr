@@ -10,7 +10,7 @@ class IssuesController < ApplicationController
   def create
     if @issue = Issue.create(issue_params)
       current_user.issues << @issue
-      redirect_to user_issues_path(current_user)
+      redirect_to user_issue_path(current_user, @issue)
     else
       flash[:error] = "didnt work!!"
       render 'new'
