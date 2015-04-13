@@ -3,9 +3,12 @@
   <%= link_to "< Back", :back %>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for @entry, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+      <%= form_for(@entry, url: {action: "create"}, html: {mulitpart: true, class: "form-group"}) do |f| %>
         <%= f.text_field :posted_by, placeholder: "*Posted by", class: "form-control form-fresh" %>
         <%= f.text_area :body, placeholder: "*Entry text", class: "form-control textarea-fresh" %>
+        <span class="picture">
+          <%= f.file_field :picture, accept: 'image/jpeg,image/jpg,image/gif,image/png' %>
+        </span>
         <%= f.submit "Submit", class: "btn btn-lg btn-fresh form-control" %>
       <% end %>
     </div>
