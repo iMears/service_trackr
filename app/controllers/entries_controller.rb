@@ -23,6 +23,6 @@ class EntriesController < ApplicationController
   private
 
     def entry_params
-      params.require(:entry).permit(:posted_by, :body)
+      params.require(:entry).permit(:posted_by, :body, :picture)
     end
 end
