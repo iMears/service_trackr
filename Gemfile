@@ -20,6 +20,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem 'sweet-alert'
 gem 'sweet-alert-confirm'
+gem 'carrierwave', '0.10.0'
+gem 'mini_magick', '3.8.0'
 
 group :development do
   gem 'guard-rspec'
