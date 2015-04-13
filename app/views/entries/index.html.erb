@@ -15,6 +15,9 @@
             <%= entry.created_at.to_s(:short) %>
           </div>
           <h4><%= entry.body %></h4>
+          <div>
+            <%= image_tag(entry.picture.url, class: "picture") if entry.picture? %>
+          </div>
         </div>
       <% end %>
     </div>
