@@ -3,6 +3,8 @@ class Entry < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader
 
+  validates :posted_by, presence: true
+  validates :body, presence: true
   validate :picture_size
 
   private
