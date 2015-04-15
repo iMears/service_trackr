@@ -12,11 +12,11 @@ class EntriesController < ApplicationController
     @issue = Issue.find(params[:issue_id])
     @entry = @issue.entries.create(entry_params)
     if @entry.valid?
-      flash[:success] = "Entry posted successfully!"
+      flash[:success] = "Entry posted!"
       redirect_to user_issue_entries_path(current_user, @issue)
     else
-      flash[:error] = "Entry could not be posted"
-      render 'new'
+      flash[:error] = {title: "Invalid Entry!", messages: @entry.errors.full_messages}
+      redirect_to new_user_issue_entry_path(current_user, @issue)
     end
   end
 

@@ -1,18 +1,38 @@
 <% if flash[:alert] %>
   <script>
-    swal({title: <%= flash[:alert].to_json.html_safe %>,
-          allowOutsideClick: true,
-          type: "error"
+    swal({ title: <%= flash[:alert].to_json.html_safe %>,
+           allowOutsideClick: true,
+           type: "error"
     });
   </script>
 
 <% elsif flash[:success] %>
   <script>
-    swal({title: <%= flash[:success].to_json.html_safe %>,
-          allowOutsideClick: true,
-          type: "success"
+    swal({ title: <%= flash[:success].to_json.html_safe %>,
+           allowOutsideClick: true,
+           type: "success"
     });
   </script>
+
+<% elsif flash.now[:error] %>
+  <% content_for :error_message do %>
+    <div>
+      <% flash[:error]['messages'].each do |message| %>
+        <div class="error-msgs"><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+  <script>
+    swal({ title: <%= flash[:error]['title'].to_json.html_safe %>,
+           text: <%= yield(:error_message).to_json.html_safe %>,
+           type: 'error',
+           html: true,
+           allowOutsideClick: true,
+    });
+  </script>
+
 <% end %>
+
+
 
 
