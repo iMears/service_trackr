@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :issues, dependent: :destroy
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :first_name, presence: true, length: { minimum: 2 }
+  validates :last_name, presence: true, length: { minimum: 2 }
   validates :company, presence: true
 end
