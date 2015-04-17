@@ -50,4 +50,6 @@ group :test do
   gem 'poltergeist'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'shoulda-matchers'
+  gem 'shoulda-callback-matchers', '~> 1.1.1'
 end
